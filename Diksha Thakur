@@ -1,0 +1,52 @@
+// Array to hold the NFTs
+let myNFTs = [];
+
+// Function to mint a new NFT
+function mintNFT(name, age, owner, income, phoneNumber, email, address) {
+    // Create an NFT object
+    const newNFT = {
+        name: name,
+        age: age,
+        owner: owner,
+        income: income,
+        phoneNumber: phoneNumber,
+        email: email,
+        address: address
+    };
+   
+    // Add the new NFT to the array
+    myNFTs.push(newNFT);
+    console.log("Minted: " + name); // Log the name of the minted NFT
+}
+
+// Function to list all NFTs
+function listNFTs() {
+    // Iterate through the array and print NFT details
+    for (let i = 0; i < myNFTs.length; i++) {
+        console.log("Name: " + myNFTs[i].name);
+        console.log("Age: " + myNFTs[i].age);
+        console.log("Owner: " + myNFTs[i].owner);
+        console.log("Income: " + myNFTs[i].income);
+        console.log("Phone Number: " + myNFTs[i].phoneNumber);
+        console.log("Email: " + myNFTs[i].email);
+        console.log("Address: " + myNFTs[i].address);
+    }
+}
+
+// Function to get total number of minted NFTs
+function getTotalNFTSupply() {
+    console.log("Total NFTs minted: " + myNFTs.length); // Log total count of minted NFTs
+}
+
+// Mint some NFTs
+mintNFT("Ram", 15, "abc", 10000, "9876543212", "Ram@gmail.com", "143 shimla, Himachal Pradesh");
+mintNFT("shyam", 20, "def", 500, "9876543421", "shyam@gmail.com", "123 hamirpur, Himachal Pradesh");
+mintNFT("xyz", 54, "ghi", 67000, "1234567", "xyz@gmail.com", "247 mandi, Himachal Pradesh");
+mintNFT("qrs", 30, "abc", 10000, "987654356", "qrs@gmail.com", "297, Himachal Pradesh");
+mintNFT("raja", 10, "Frank", 3000, "985643271", "raja@example.com", "303 dharmshalaa St, Himachal Pradesh");
+
+// List all NFTs
+listNFTs();
+
+// Get total number of minted NFTs
+getTotalNFTSupply(); // Log total count of minted NFTs
